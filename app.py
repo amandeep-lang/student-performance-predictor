@@ -49,7 +49,7 @@ st.write("Fill the student details and click **Predict**. (This app expects the 
 
 with st.form("input_form"):
     gender = st.selectbox("Gender", ["male","female"])
-    age = st.slider("Age", 15, 19, 17)
+    age = st.slider("Age", 15, 30, 22)
 
     parent_education = st.selectbox("Parent education", ["none","high_school","bachelor","master"])
     study_time_hours = st.slider("Study time (hours/week)", 0, 40, 10)
@@ -126,3 +126,4 @@ if submitted:
         st.write("Common causes:")
         st.write("- Your `best_model.pkl` does not contain the preprocessing pipeline (so it expects different columns).")
         st.write("- The model was saved without the engineered columns. In that case re-save the full pipeline in Colab (instructions below).")
+
